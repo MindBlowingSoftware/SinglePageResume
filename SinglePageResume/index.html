@@ -4,28 +4,32 @@
     <title>Single Page Resume</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet"/>
     <style>
-        h1,h2,h3,h4,div,canvas {
-	        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-	        
-        }
-         h3 {
-             font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-	        
+    @media all {
+        h3 {
             background-color: #36a2eb;
-            background-color: rgba(54, 162, 235, 0.2);            
-         }
-         body {
-             background-color: gray;
-         }
+            background-color: rgba(54, 162, 235, 0.2);
+            padding: 2px 20px;
+            -webkit-print-color-adjust: exact;
+        }
+        body {
+            background-color: gray;
+        }
         .container-fluid {
             max-width: 21cm;
             background-color: white;
         }
         canvas {
-          width: 100%;
-          height: auto;
+            width: 100%;
+            height: auto;
         }
-        
+        .borderedTable {
+            border-right: 1px solid #dddddd;
+        }
+        .borderedTableBottom {
+            border-bottom: 1px solid #dddddd;
+        } 
+    }
+         
     </style>
     
 </head>
@@ -34,79 +38,73 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             <h2>Sanjay Sharma</h2>
+            <p>Mobile: 0412 208 257 | Email: Sanjay.au AT gmail.com</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 borderedTable">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Professional Synopsis</h3>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                    <h3>
+                    About Me</h3>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                   I am a goal oriented developer who believes in writing testable, maintainable, SOLID and DRY code. I am experienced in development of web apps, winform apps, microservices and database apps.
-                   I have experience in mentoring other developers and leading a small team of offshore developers. I am equally comfortable and experienced in working in small teams, large teams and at client locations.
+                    <ul class="list-unstyled">
+                        <li>
+                            6 years of experience in developing with .NET Framework out of which 6 years with Web development and SQL, 1.5 years with C# Winforms,
+                            2 years with SOA / Microservices.
+                        </li>
+                        <li>
+                            Experienced in taking lead , working alone and with very little specifications or clarity. 
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Education</h3>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="list-unstyled">
-                        <li>
-                            <h4>University of New England</h4>
-                        </li>
-                        <li><h5>Master of Information Technology (Software Engineering)</h5></li>
-                        <li><h5>Sydney (Australia) <i>06/2005 - 01/2008</i></h5></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="list-unstyled">
-                        <li>
-                            <h4>University of Pune</h4>
-                        </li>
-                        <li><h5>Bachelor of Mechanical Engineering</h5></li>
-                        <li><h5>Pune (India) <i>06/1998 - 01/2003</i></h5></li>
-                    </ul>
+                    <h3 >Work Experience</h3>
                 </div>
 
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Work Experience</h3>
-                </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <ul class="list-unstyled">
-                        <li>
-                            <h4>Wesley Mission</h4>
+                        <li class="borderedTableBottom">
+                            <h4>Applications Developer</h4>
                         </li>
-                        <li><h5>Applications Developer Sydney (Australia) <i>01/2015 - Present</i></h5></li>
-                        <li>Developed integrations between external systems using NServiceBus and MSMQ. Used HTML, JQuery, MVC and Web API for front end.</li>
-                        <li>Automated business work flow for scenarios such as applications for finance, leave requests,new hires.</li>
-                        <li>Developed build scripts using PSake for one command deployments (deploy Dev, deploy UAT etc.)</li>                        
+                        <li><h5>Wesley Mission (2000+ staff) <i>01/2015 - Present</i> <strong>(2 Years)</strong></h5></li>
+                        <li>Developing integrations between external systems in keeping with <strong>SOA / MicrosServices</strong> design principles.</li>
+                        <li>
+                            Took a lead role in managing <strong>complete SDLC</strong> of these projects :
+                            <ul>
+                                <li>Automated a business work flow for credit card applications.</li>
+                                <li>Built a ticketing system to identify jobs in an external system.</li>
+                                <li>Integrated a staff directory (classic ASP) with organization's intranet (PHP) </li>
+                            </ul>
+                        </li>
+                        <li>Upgraded integrations to <strong>NServiceBus 4.7</strong> from 2.6</li>
+                        <li>Provided <strong>3rd level technical support</strong> for internal applications and integrations.</li>
+                        <li><strong>BAU</strong> form upgrades, work-flow changes and enhancements.</li>
+                        <li>Technologies used: NServiceBus, ASP.NET MVC 4, WebAPI, C#, SQL 2012, PowerShell 3.0, TDD, StructureMap, Dapper, EF Code-First, LINQ </li>
                     </ul>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="list-unstyled">
-                        <li>
-                            <h4>Levo Group</h4>
+                        <li class="borderedTableBottom">
+                            <h4>.NET Developer</h4>
                         </li>
-                        <li><h5>Applications Developer Sydney (Australia) <i>10/2010 - 08/2014</i></h5></li>
-                        <li>Lead a team of 3 developers to develop a media exchange platform using C#, MVC, AWS Elastic Transcoding, AWS S3 Storage.</li>
-                        <li>Worked in a team of 5 developers to develop modules and customisations for a finance product using C# Winforms, Crystal Reports and T-SQL</li>
-                        <li>Worked on a number of web development projects using ASP.NET Webforms, MVC, C#, JavaScript and Jquery.</li>
-                        <li></li>
+                        <li><h5>Levo Group (20 staff) <i>10/2010 - 08/2014</i><strong> (3.8 Years)</strong></h5></li>
+                        <li><strong>Lead a team of 3 developers </strong>to develop a media exchange platform where media buyers can bid and buy photos and videos. Used <strong>AWS S3 .NET API </strong> for storage. Watermarked photos and videos and transcoded videos
+                            using <strong>AWS Elastic Transcoder</strong>. Integrated a payment gateway and a complex multinational currency exchange, commissions and reporting system.</li>
+                        <li>Worked in a team of 5 developers to develop modules and customizations for a finance product using <strong>C# Winforms, Crystal Reports and T-SQL</strong></li>
+                        <li><strong>BAU</strong> work on a number of web development projects using ASP.NET Webforms, MVC, C#, JavaScript and Jquery.</li>
                     </ul>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="list-unstyled">
-                        <li>
-                            <h4>Zoo2 Technologies</h4>
+                        <li class="borderedTableBottom">
+                            <h4>PHP Developer</h4>
                         </li>
-                        <li><h5>PHP Web Developer Sydney (Australia) <i>10/2008 - 12/2009</i></h5></li>
-                        <li>Developed and maintained websites using PHP, MySQL and Classic ASP.</li>
+                        <li><h5>Zoo2 Technologies <i>10/2008 - 12/2009</i><strong> (1 Year)</strong></h5></li>
+                        <li>Developed websites using <strong>PHP, MySQL and Classic ASP</strong>.</li>
                     </ul>
                 </div>
             </div>
@@ -114,32 +112,21 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Skills</h3>
+                    <h3 >Skills</h3>
                     <canvas id="skillsChart" width="400" height="600"></canvas>                    
                 </div>
             </div>           
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Achievements</h3>
+                    <h3>Education</h3>
                     <ul>
-                        <li>Worked as a project lead for a complex media exchange platform development project.</li>
-                        <li>Mentored junior developers.</li>
-                        <li>Led a team of 4 offshore developers.</li>
-                        <li>Developed a rapid delivery library for common project structures.</li>
-                        <li>Established good understanding and relationship with clients and stakeholders.</li>                        
+                        <li><i>2014</i> Microsoft Certified Professional - Exam 461 – Querying SQL Server 2012.</li>
+                        <li><i>2009</i> Microsoft Certified Technology Specialist - Exams 528,531 – Web Applications</li>
+                        <li><i>2008</i> Master of Information Technology <strong>(Software Engineering)</strong> University of New England</li>
+                        <li><i>2003</i> Bachelor of <strong>Mechanical Engineering</strong> University of Pune</li>
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li><i>Sept 2014</i> Microsoft Certified Professional - Exam 461 – Querying SQL Server 2012.</li>
-                        <li><i>June 2009</i> Microsoft Certified Technology Specialist - Exams 528,531 – Web Applications</li>                        
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -185,7 +172,6 @@
                                 beginAtZero: false,
                                 stepSize: 2,
                                 suggestedMin: 2,
-                                fontfamily: 'Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif',
                                 callback: function (value) { return 2009 + value;}
                                 
                             },
